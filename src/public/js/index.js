@@ -22,7 +22,7 @@ Swal.fire({
     socket.emit("authenticated",user)
 })
 
-
+// event for send a messsage and clean chatBox
 chatBox.addEventListener("keyup", evt => {
     if (evt.key === "Enter") {
         if (chatBox.value.trim().length > 0) {
@@ -46,6 +46,7 @@ socket.on("logs", data => {
     logsPanel.innerHTML = message;
 })
 
+// notification of an user has connected
 socket.on("newUserConected", data =>{
     if(!user) return;
     Swal.fire({
