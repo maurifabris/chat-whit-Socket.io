@@ -9,7 +9,7 @@ const logsPanel = document.getElementById("logsPanel")
 
 // alert to set a username
 Swal.fire({
-    title: "Plase enter yout username",
+    title: "Plase enter your username",
     input: "text",
     inputValidator: (value) => {
         return !value && "Username is required"
